@@ -1,11 +1,18 @@
 import webbrowser
 
 class Movie():
-    def __init__(self, movie_title, movie_storyline, poster_image, trailer_youtube):
-        self.title = movie_title
-        self.storyline = movie_storyline
-        self.poster_image_url = poster_image
-        self.trailer_youtube_url = trailer_youtube
+	''' This class provides a way to store movie related information.
 
-    def show_trailer(self):
-        webbrowser.open(self.trailer_youtube_url)
+	Attributes:
+		movie_title: The movie's title.
+		poster_image_url: a url link to a poster for the movie
+		trailer_youtube_id: a url link to a trailer for the movie on youtube
+	'''
+
+	def __init__(self, movie_title, poster_url, youtube_trailer):
+		self.title = movie_title
+		self.poster_image_url = poster_url
+		self.trailer_youtube_url = youtube_trailer
+
+	def show_trailer(self):
+		webbrowser.open(self.trailer_youtube_url)
